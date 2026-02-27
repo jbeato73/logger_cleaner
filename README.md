@@ -12,3 +12,14 @@ A specialized sanitization utility designed for infrastructure security and audi
 2. **Execute Cleanup:**
    ```bash
    uv run clean
+
+Execute Cleanup:
+# Bash
+uv run clean
+
+# Data Logic
+# The script performs a three-point check on every log entry to ensure data quality:
+
+1. Validates the presence of a timestamp.
+2. Ensures a non-empty IP address field.
+3. Confirms a valid status (e.g., SUCCESS/ERROR).
