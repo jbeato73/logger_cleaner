@@ -1,0 +1,19 @@
+[project]
+name = "logger-cleaner"
+version = "0.1.0"
+description = "Enterprise log sanitization tool for infrastructure auditing"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.32.5",
+]
+
+[project.scripts]
+clean = "logger_cleaner:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
